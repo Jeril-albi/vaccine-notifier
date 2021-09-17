@@ -15,6 +15,16 @@ class _Slots extends State<Slots> {
     super.initState();
   }
 
+  colorOfContainer(var available, var money) {
+    if (available != 0 && money != '0') {
+      return Colors.red[900];
+    } else if (available != 0 && money == '0') {
+      return Colors.green[700];
+    } else {
+      return Colors.grey[850];
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
@@ -31,62 +41,48 @@ class _Slots extends State<Slots> {
             ? ListView.builder(
                 itemCount: Widgets.searchData.length,
                 itemBuilder: (context, index) {
-                  return InkWell(
-                    onTap: () {
-                      wid.showNotification(
-                          Widgets.searchData[index]['name'].toString(),
-                          index,
-                          Widgets.searchData[index]['available_capacity']
-                              .toString(),
-                          Widgets.searchData[index]['available_capacity_dose1']
-                              .toString(),
-                          Widgets.searchData[index]['available_capacity_dose2']
-                              .toString(),
-                          Widgets.searchData[index]['vaccine'].toString(),
-                          Widgets.searchData[index]['min_age_limit']
-                              .toString());
-                    },
-                    child: Container(
-                      margin: EdgeInsets.all(5),
-                      height: 230,
-                      color:
-                          Widgets.searchData[index]['available_capacity'] != 0
-                              ? Colors.red[900]
-                              : Colors.grey[850],
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Center  Name: ${Widgets.searchData[index]['name'].toString()}",
-                            style: TextStyle(fontSize: 15, color: Colors.white),
-                          ),
-                          Divider(),
-                          Text(
-                            "Available Slots: ${Widgets.searchData[index]['available_capacity'].toString()} ( D1: ${Widgets.searchData[index]['available_capacity_dose1'].toString()}, D2: ${Widgets.searchData[index]['available_capacity_dose2'].toString()} )",
-                            style: TextStyle(fontSize: 15, color: Colors.white),
-                          ),
-                          Divider(),
-                          Text(
-                            "Status: ${Widgets.searchData[index]['fee_type'].toString()} ( ₹ ${Widgets.searchData[index]['fee'].toString()} )",
-                            style: TextStyle(fontSize: 15, color: Colors.white),
-                          ),
-                          Divider(),
-                          Text(
-                            "Vaccine Name: ${Widgets.searchData[index]['vaccine'].toString()}",
-                            style: TextStyle(fontSize: 15, color: Colors.white),
-                          ),
-                          Divider(),
-                          Text(
-                            "Min Age: ${Widgets.searchData[index]['min_age_limit'].toString()} ",
-                            style: TextStyle(fontSize: 15, color: Colors.white),
-                          ),
-                          Divider(),
-                          Text(
-                            "Time : ${Widgets.searchData[index]['slots'].toString()}",
-                            style: TextStyle(fontSize: 15, color: Colors.white),
-                          ),
-                        ],
-                      ),
+                  return Container(
+                    margin: EdgeInsets.all(5),
+                    height: 230,
+                    color: colorOfContainer(
+                        Widgets.searchData[index]['available_capacity'],
+                        Widgets.searchData[index]['fee']),
+                    // Widgets.searchData[index]['available_capacity'] != 0
+                    //     ? Colors.red[900]
+                    //     : Colors.grey[850],
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Center  Name: ${Widgets.searchData[index]['name'].toString()}",
+                          style: TextStyle(fontSize: 15, color: Colors.white),
+                        ),
+                        Divider(),
+                        Text(
+                          "Available Slots: ${Widgets.searchData[index]['available_capacity'].toString()} ( D1: ${Widgets.searchData[index]['available_capacity_dose1'].toString()}, D2: ${Widgets.searchData[index]['available_capacity_dose2'].toString()} )",
+                          style: TextStyle(fontSize: 15, color: Colors.white),
+                        ),
+                        Divider(),
+                        Text(
+                          "Status: ${Widgets.searchData[index]['fee_type'].toString()} ( ₹ ${Widgets.searchData[index]['fee'].toString()} )",
+                          style: TextStyle(fontSize: 15, color: Colors.white),
+                        ),
+                        Divider(),
+                        Text(
+                          "Vaccine Name: ${Widgets.searchData[index]['vaccine'].toString()}",
+                          style: TextStyle(fontSize: 15, color: Colors.white),
+                        ),
+                        Divider(),
+                        Text(
+                          "Min Age: ${Widgets.searchData[index]['min_age_limit'].toString()} ",
+                          style: TextStyle(fontSize: 15, color: Colors.white),
+                        ),
+                        Divider(),
+                        Text(
+                          "Time : ${Widgets.searchData[index]['slots'].toString()}",
+                          style: TextStyle(fontSize: 15, color: Colors.white),
+                        ),
+                      ],
                     ),
                   );
                 })
