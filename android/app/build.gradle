@@ -43,7 +43,7 @@ android {
         applicationId "com.jerilalbi.auto_vaccine"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode flutterVersionCode.toInteger()
+        versionCode 3
         versionName flutterVersionName
     }
     signingConfigs {
@@ -58,10 +58,10 @@ android {
         release {
             shrinkResources false
             minifyEnabled false
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
         }
     }
-/*
+    
     splits {
         abi {
             enable true
@@ -69,7 +69,7 @@ android {
             include "x86", "x86_64", "armeabi", "armeabi-v7a", "arm64-v8a"
             universalApk false
         }
-    } */
+    } 
 }
 
 flutter {

@@ -3,7 +3,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="CoWin Notify"
+        android:label="CoWin Alert"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

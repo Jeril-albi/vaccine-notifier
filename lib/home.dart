@@ -137,7 +137,7 @@ class _Home extends State<Home> with WidgetsBindingObserver {
     return Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: Text("CoWin Notify"),
+          title: Text("CoWin Alert"),
         ),
         body: SingleChildScrollView(
           child: Container(
