@@ -10,6 +10,6 @@ You can provide the pincode, age, vaccine name, and dose.
 
 In this app you can also search the available slots in given pincode and date. 
 
-# DOWNLOAD
-<a href="https://www.youtube.com/">
+# [DOWNLOAD](https://www.youtube.com/>)
+
 
