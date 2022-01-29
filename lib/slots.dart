@@ -47,9 +47,6 @@ class _Slots extends State<Slots> {
                     color: colorOfContainer(
                         Widgets.searchData[index]['available_capacity'],
                         Widgets.searchData[index]['fee']),
-                    // Widgets.searchData[index]['available_capacity'] != 0
-                    //     ? Colors.red[900]
-                    //     : Colors.grey[850],
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -59,7 +56,7 @@ class _Slots extends State<Slots> {
                         ),
                         Divider(),
                         Text(
-                          "Available Slots: ${Widgets.searchData[index]['available_capacity'].toString()} ( D1: ${Widgets.searchData[index]['available_capacity_dose1'].toString()}, D2: ${Widgets.searchData[index]['available_capacity_dose2'].toString()} )",
+                          "Available Slots: ${Widgets.searchData[index]['available_capacity'].toString()} ( D1: ${Widgets.searchData[index]['available_capacity_dose1'].toString()}, D2: ${Widgets.searchData[index]['available_capacity_dose2'].toString()}, Booster: ${Widgets.searchData[index]['available_capacity'] - (Widgets.searchData[index]['available_capacity_dose1'] + Widgets.searchData[index]['available_capacity_dose2'])} )",
                           style: TextStyle(fontSize: 15, color: Colors.white),
                         ),
                         Divider(),

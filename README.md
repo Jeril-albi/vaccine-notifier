@@ -1,11 +1,15 @@
-# vaccine_notifier
+# Cowin Alert
 
-A new Flutter application.
+An App for getting available slot notifications for covid vaccine in India.
 
 ## Getting Started
 
-This application is build for geting vaccine slots notifications in India. The data
-of the slots are fetch form the governments api. 
+Cowin alert is a notification providing app for android, which is available only in India. The app checks the available slots in the government database in every minute. 
 
-I got appoinment for vaccine by using this app. 
+You can provide the pincode, age, vaccine name, and dose. 
+
+In this app you can also search the available slots in given pincode and date. 
+
+# DOWNLOAD
+<a href="https://www.youtube.com/">
 
