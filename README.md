@@ -10,6 +10,8 @@ You can provide the pincode, age, vaccine name, and dose.
 
 In this app you can also search the available slots in given pincode and date. 
 
-# [DOWNLOAD](https://www.youtube.com/>)
+# DOWNLOAD
+Covid related app is not allowed to publish in playstore without government approval.
+Click here to [download](https://www.mediafire.com/file/e1aqpu1aqzrbkir/cowin_alert.apk/file) the app.
 
 
